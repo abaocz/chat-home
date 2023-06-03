@@ -1,0 +1,26 @@
+package com.test.chat.domain;
+
+
+
+//浏览器发送给服务器的数据
+public class Message {
+
+    private String toName;
+    private String message;
+
+    public String getToName() {
+        return toName;
+    }
+
+    public void setToName(String toName) {
+        this.toName = toName;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+}

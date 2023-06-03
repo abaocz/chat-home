@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聊天页</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="../js/jquery-2.1.0.min.js"></script>
+  <script src="../js/message.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="../css/message.css">
+</head>
+<body>
+  <div id="main">
+    <div class="container">
+        <div class="left_container">
+            <div class="header">
+                <div style="text-align: center;height: 40px;line-height: 40px">测试2号(225468)</div>
+            </div>
+            <div class="chat-container">
+                <div class="chat-messages" style="display: none">
+                    <div class="message outgoing">
+                      <div class="message-content">
+                        <p>Hello, how are you?</p>
+                        <span class="message-time">10:00 AM</span>
+                      </div>
+                    </div>
+                    <div class="message incoming">
+                      <div class="message-content">
+                        <p>I'm good,thank you!I'm good,thank you!I'm good, thank you!</p>
+                        <span class="message-time">10:05 AM</span>
+                      </div>
+                    </div>
+                    <!-- 添加更多聊天记录 -->
+                  </div>
+            </div>
+            <div class="message-box" style="display: none">
+                <div id="" style="height: 30px;">功能区</div>
+                <textarea name="message" cols="30" rows="10"></textarea>
+                <button id="submit">发送</button>
+            </div>
+        </div>
+        <div class="right_container">
+            <div class="friend-list">
+                <div class="my-info">
+                    <div id="user-info" style="text-align: center;font-size:20px;margin-top: 10px">测试号(114514)</div>
+                    <div id="search_friend">
+                        <span>搜索</span><input type="text" class="search_input">
+                    </div>
+                </div>
+                <div class="friend-info">
+                    <div>
+                        <h2>添加好友列表</h2>
+                        <ul class="friend-list-items" id="add_friends">
+                            <li class="friend-item">
+                                <div class="friend-avatar"></div>
+                                <div class="friend-info">
+                                    <h3>好友1</h3>
+                                    <p>在线</p>
+                                </div>
+                                <div id="add_chat" style="margin-right: 10px">添加</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>好友列表</h2>
+                        <ul class="friend-list-items" id="my_friends">
+                            <li class="friend-item">
+                                <div class="friend-avatar"></div>
+                                <div class="friend-info">
+                                <h3>好友1</h3>
+                                <p>在线</p>
+                                </div>
+                            </li>
+                        <!-- 添加更多好友项 -->
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>系统通知</h2>
+                        <ul class="friend-list-items" id="notification" style="margin-bottom: 15px">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

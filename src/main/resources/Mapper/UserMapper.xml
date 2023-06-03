@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.test.chat.mapper.UserMapper">
+    <select id="queryFriends" resultType="com.test.chat.domain.User" parameterType="java.lang.String">
+        SELECT nickname,username,status FROM USER WHERE username IN (SELECT friend_id FROM friend WHERE user_id= #{username})
+    </select>
+
+    <update id="setStatus">
+        UPDATE user SET STATUS=#{status} WHERE username=#{username}
+    </update>
+
+    <select id="getUserByUsername" resultType="com.test.chat.domain.User" parameterType="java.lang.String">
+        SELECT username,nickname,status FROM USER WHERE username=#{username}
+    </select>
+
+    <select id="getUserByNickname" resultType="com.test.chat.domain.User" parameterType="java.lang.String">
+        SELECT username,nickname,status FROM USER WHERE nickname LIKE CONCAT('%', #{nickname}, '%')
+    </select>
+
+    <select id="getUserStatus" resultType="java.lang.Integer" parameterType="java.lang.String">
+        SELECT STATUS FROM USER WHERE username=#{username}
+    </select>
+</mapper>

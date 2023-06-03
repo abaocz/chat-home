@@ -1,0 +1,261 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+#main{
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  /* background-color: antiquewhite; */
+}
+
+.container {
+  display: flex;
+  margin-top: 30px;
+  height: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left_container {
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.right_container {
+  margin-left: 50px;
+  width: 40%;
+}
+.left_container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header{
+  background-color: gray;
+  height: 40px;
+}
+
+/* 聊天区css代码 */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  /*overflow-y: scroll;*/
+}
+
+.chat-messages {
+  flex: 1;
+  align-items: flex-end;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 1px; /* 设置滚动条宽度 */
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent; /* 设置滚动条背景颜色 */
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #ffffff; /* 设置滚动条的颜色 */
+  border-radius: 1px; /* 设置滚动条的边框半径 */
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #ffffff; /* 设置滚动条的悬停颜色 */
+}
+
+.message {
+  display: flex;
+  align-self: center;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.message-content {
+  padding: 8px;
+  border-radius: 5px;
+  min-width: 40%;
+  max-width: 80%;
+}
+
+.outgoing {
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+.outgoing .message-content{
+  background-color: #dcf8c6;
+}
+
+.incoming {
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+.incoming .message-content{
+  background-color: #f2f2f2;
+}
+
+.message p {
+  margin-bottom: 2px;
+}
+
+.message-time {
+  font-size: 12px;
+  color: #777;
+}
+
+/* 聊天区css结束 */
+
+/* 发送消息框开始 */
+.message-box {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.message-box>textarea {
+  resize: none;
+  font-size: large;
+  /*width: calc(100%);*/
+  height: 60%;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+.message-box>textarea:focus {
+  outline: none;
+}
+
+.message-box button{
+  background-color: #dcf8c6;
+  height: 30px;
+  width: 80px;
+  margin-left: auto;
+  margin-right: 20px;
+  border: 1px solid rgb(186, 247, 210);
+  border-radius: 5px;
+}
+/* 发送消息框结束 */
+
+/* 登录用户css开始 */
+.my-info{
+  height: 100px;
+  /* background-image: url(../images/image.png); */
+  /* background-size: 100%; */
+  background-color: #ccc;
+}
+#search_friend{
+  text-align: center;
+  margin-top: 30px;
+}
+
+#search_friend input{
+  height: 20px;
+}
+
+#search_friend input:focus{
+  outline: none;
+}
+
+
+/* 登录用户css结束 */
+
+/* 好友列表开始 */
+.friend-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.friend-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.friend-info{
+  flex-grow: 1;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+.friend-info>div{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.friend-list-items {
+  flex: 1;
+  margin-left: 10px;
+  list-style-type: none;
+  padding: 0;
+  overflow-y: scroll;
+}
+.friend-list-items::-webkit-scrollbar {
+  width: 1px; /* 设置滚动条宽度 */
+}
+
+.friend-list-items::-webkit-scrollbar-track {
+  background: transparent; /* 设置滚动条背景颜色 */
+}
+
+.friend-list-items::-webkit-scrollbar-thumb {
+  background: #ffffff; /* 设置滚动条的颜色 */
+  border-radius: 1px; /* 设置滚动条的边框半径 */
+}
+
+.friend-list-items::-webkit-scrollbar-thumb:hover {
+  background: #ffffff; /* 设置滚动条的悬停颜色 */
+}
+
+.friend-item {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.friend-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.friend-info>div{
+  flex: 1;
+}
+
+.friend-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.friend-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #777;
+}
+/* 好友列表结束 */
